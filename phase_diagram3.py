@@ -18,6 +18,16 @@ t0 = time.time()
 Z1,Z2,Z3 = 6,8,10
 elem = ('C','O','Ne')
 
+Z1,Z2,Z3 = 6,8,26
+elem = ('C','O','Fe')
+
+Z1,Z2,Z3 = 6,8,12
+elem = ('C','O','Mg')
+
+Z1,Z2,Z3 = 6,8,11
+elem = ('C','O','Na')
+
+
 print(Z1,Z2,Z3,elem)
 
 # charge ratios
@@ -26,7 +36,7 @@ RZ3 = 1.0*Z3/Z1
 G1, G2 = 0.8, 1.1*RZ3**(5.0/3.0)
 
 # number of steps in x and gamma
-xsteps = 100
+xsteps = 200
 gsteps = 100
 
 # scan through gamma and find the tangent points

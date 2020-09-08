@@ -16,7 +16,7 @@ from matplotlib import rc
 #rc('font',**{'family':'sans-serif','sans-serif':['Helvetica']})
 ## for Palatino and other serif fonts use:
 rc('font',**{'family':'serif','serif':['Times New Roman']})
-rc('text', usetex=False)
+rc('text', usetex=True)
 
 t0 = time.time()
 
@@ -24,8 +24,18 @@ t0 = time.time()
 # and the range of gamma to search over:
 #Z1,Z2,Z3 = 8,26,34
 #elem = ('O','Fe','Se')
+
 Z1,Z2,Z3 = 6,8,10
 elem = ('C','O','Ne')
+
+#Z1,Z2,Z3 = 6,8,26
+#elem = ('C','O','Fe')
+
+#Z1,Z2,Z3 = 6,8,12
+#elem = ('C','O','Mg')
+
+#Z1,Z2,Z3 = 6,8,11
+#elem = ('C','O','Na')
 
 print(Z1,Z2,Z3,elem)
 
@@ -65,9 +75,9 @@ for gam in gam_vec:
     tax.boundary(linewidth=0.5)
     tax.gridlines(multiple=0.25, color='black', linewidth=0.5, zorder=0)#, color="blue")
 
-    plt.annotate(r'$Z_1=9$', fontsize=14, xy=(-0.03,0.85), fontname='Times New Roman')
-    plt.annotate(r'$Z_2=12$', fontsize=14, xy=(-0.03,0.78), fontname='Times New Roman')
-    plt.annotate(r'$Z_3=22$', fontsize=14, xy=(-0.03,0.71), fontname='Times New Roman')
+    plt.annotate(r'$Z_1=%d$' % (Z1,), fontsize=14, xy=(-0.03,0.85), fontname='Times New Roman')
+    plt.annotate(r'$Z_2=%d$' % (Z2,), fontsize=14, xy=(-0.03,0.78), fontname='Times New Roman')
+    plt.annotate(r'$Z_3=%d$' % (Z3,), fontsize=14, xy=(-0.03,0.71), fontname='Times New Roman')
     plt.annotate(r'$\Gamma_1 = {:.1f}$'.format(178.6/gam), fontsize=14, xy=(0.78,0.75),
             fontname='serif')
 
@@ -120,6 +130,7 @@ for gam in gam_vec:
     tax._redraw_labels()
      
     count +=1
-    plt.savefig('out3/phase_diagram_%d.pdf' % (count,), bbox_inches='tight')
+    #plt.savefig('out3/phase_diagram_%04d.png' % (count,), bbox_inches='tight', dpi=300)
+    plt.savefig('out3_C_O_Ne/phase_diagram_%04d.pdf' % (count,), bbox_inches='tight')
     
     tax.close()
