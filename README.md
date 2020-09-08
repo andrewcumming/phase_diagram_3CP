@@ -1,4 +1,4 @@
-##Compiling
+### Compiling
 
 * The free-energy routines use cython to speed up the calculation. To compile  `free_energy.pyx` (2 component free energy) and `free_energy3.pyx`into modules, use
 
@@ -17,7 +17,7 @@ which will make   `free_energy.html`
 
 `mkdir out3`
 
-##Running the code
+### Running the code
 
 `phase_diagram.py` calculates the phase diagram for a 2 component mixture. It generates a plot `phase_diagram_%d_%d.pdf` and the data is output in the `dat` directory
 
