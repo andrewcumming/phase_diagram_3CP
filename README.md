@@ -1,8 +1,9 @@
 ### Compiling
 
-* The free-energy routines use cython to speed up the calculation. To compile  `free_energy.pyx` (2 component free energy) and `free_energy3.pyx`into modules, use
+* The free-energy routines use cython to speed up the calculation. To compile  `free_energy.pyx` (2 component free energy) and `free_energy3.pyx` (3 component free energy) into modules, use
 
 `python setup.py build_ext --inplace`
+
 `python setup3.py build_ext --inplace`
 
 To make an html to inspect the code you can use, e.g.
@@ -24,3 +25,9 @@ which will make   `free_energy.html`
 `phase_diagram3.py` calculates the phase diagram for a 3 component mixture. The data us output to the `dat` directory. 
 
 `phase_diagram3_plots.py` produces ternary plots based on the data output from `phase_diagram3.py`. The plots are written to the `out3` directory
+
+### References
+
+* [Medin & Cumming 2010](https://ui.adsabs.harvard.edu/abs/2010PhRvE..81c6107M/abstract)
+
+* [Caplan et al. 2018](https://ui.adsabs.harvard.edu/abs/2018ApJ...860..148C/abstract)
