@@ -1,3 +1,5 @@
+Calculates the phase diagram for a three-component classical plasma. This code uses analytic fits to free energies of the liquid and solid phase to construct the free energy of the mixture. The double tangent construction is used to identify unstable regions in the phase diagram.
+
 ### Compiling
 
 * The free-energy routines use cython to speed up the calculation. To compile  `free_energy.pyx` (2 component free energy) and `free_energy3.pyx` (3 component free energy) into modules, use
